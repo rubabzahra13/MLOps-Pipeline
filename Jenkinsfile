@@ -47,29 +47,29 @@ pipeline {
     }
 
     post {
-        //  success {
-        //     emailext (
-        //         subject: 'Deployment Successful!',
-        //         body: 'The ML model API has been successfully deployed!',
-        //         to: 'admin@example.com'
-        //     )
-        // }
-        // failure {
-        //     emailext (
-        //         subject: 'Deployment Failed!',
-        //         body: 'Jenkins pipeline failed. Check logs.',
-        //         to: 'admin@example.com'
-        //     )
-        // }
-        success {
-            mail to: 'hamyl.sheikh90@gmail.com',
-                 subject: 'Deployment Successful',
-                 body: 'The ML model API has been successfully deployed!'
+         success {
+            emailext (
+                subject: 'Deployment Successful!',
+                body: 'The ML model API has been successfully deployed!',
+                to: 'admin@example.com'
+            )
         }
         failure {
-            mail to: 'hamyl.sheikh90@gmail.com',
-                 subject: 'Deployment Failed',
-                 body: 'The Jenkins pipeline failed. Please check the logs.'
+            emailext (
+                subject: 'Deployment Failed!',
+                body: 'Jenkins pipeline failed. Check logs.',
+                to: 'admin@example.com'
+            )
         }
+        // success {
+        //     mail to: 'hamyl.sheikh90@gmail.com',
+        //          subject: 'Deployment Successful',
+        //          body: 'The ML model API has been successfully deployed!'
+        // }
+        // failure {
+        //     mail to: 'hamyl.sheikh90@gmail.com',
+        //          subject: 'Deployment Failed',
+        //          body: 'The Jenkins pipeline failed. Please check the logs.'
+        // }
     }
 }
