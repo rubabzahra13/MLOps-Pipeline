@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import joblib
+import numpy as np  # ✅ Added this line to fix F821 error
 
 app = Flask(__name__)
 
