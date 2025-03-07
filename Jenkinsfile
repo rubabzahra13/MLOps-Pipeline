@@ -29,7 +29,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry([credentialsId: 'docker-hub-credentials', url: '']) {
-                        bat 'docker push $DOCKER_IMAGE'
+                        bat 'docker push hamayal/ml-app:latest'
                     }
                 }
             }
