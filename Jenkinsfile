@@ -61,15 +61,5 @@ pipeline {
                 to: 'admin@example.com'
             )
         }
-        // success {
-        //     mail to: 'hamyl.sheikh90@gmail.com',
-        //          subject: 'Deployment Successful',
-        //          body: 'The ML model API has been successfully deployed!'
-        // }
-        // failure {
-        //     mail to: 'hamyl.sheikh90@gmail.com',
-        //          subject: 'Deployment Failed',
-        //          body: 'The Jenkins pipeline failed. Please check the logs.'
-        // }
     }
 }
