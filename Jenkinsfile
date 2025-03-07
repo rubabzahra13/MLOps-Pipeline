@@ -5,6 +5,10 @@ pipeline {
         DOCKER_IMAGE = 'hamayal/ml-app:latest'
     }
 
+     triggers {
+        githubPush()  // Ensures Jenkins triggers on push events
+    }
+
     stages {
         stage('Clone Repository') {
             steps {
