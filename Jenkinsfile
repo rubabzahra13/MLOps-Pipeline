@@ -20,7 +20,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    bat 'docker build -t $DOCKER_IMAGE .'
+                    bat 'docker build -t hamayal/ml-app:latest .'
                 }
             }
         }
@@ -37,7 +37,7 @@ pipeline {
 
         stage('Deploy Container') {
             steps {
-                bat 'docker run -d -p 5000:5000 $DOCKER_IMAGE'
+                bat 'docker run -d -p 5000:5000 hamayal/ml-app:latest'
             }
         }
     }
